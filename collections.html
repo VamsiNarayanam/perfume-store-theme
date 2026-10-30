@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections — Rosely</title>
+  <meta name="description" content="Four fragrance families: Floral Reverie, Woody and Earthy, and Fresh and Aquatic. Choose the mood you want to wear.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="logo" href="index.html" aria-label="Stackly home">
+        <img src="Images/stackly-white.webp" alt="" width="97" height="40">
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html" aria-current="page">Collections</a>
+        <a href="story.html">Our story</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+      </nav>
+      <div class="header-tools">
+        <button class="icon-btn" id="open-search" aria-label="Search fragrances">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+        </button>
+        <a class="icon-btn" id="open-account" href="login.html" aria-label="Log in">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.4-3 3.8-4.4 7-4.4s5.6 1.4 7 4.4"/></svg>
+        </a>
+        <a class="icon-btn bag-btn" id="open-cart" href="cart.html" aria-label="Open bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8h11l-.8 11H7.3L6.5 8z"/><path d="M9 8V6.8A3 3 0 0 1 12 3.8 3 3 0 0 1 15 6.8V8"/></svg>
+          <span class="bag-count" id="bag-count" hidden>0</span>
+        </a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" hidden>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="collections.html">Collections</a>
+    <a href="story.html">Our story</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="cart.html">Your bag</a>
+  </nav>
+
+  <main id="main">
+    <section class="col-hero">
+      <div class="wrap col-hero-stage">
+        <h1>
+          <span class="col-mood">Every mood</span>
+          <span class="col-line-2">
+            <span class="col-has">Has a</span>
+            <span class="col-pink">Fragrance</span>
+          </span>
+        </h1>
+        <img class="col-hero-bottle" src="Images/collection-hero.webp" alt="A round glass perfume bottle tied with a pale pink bow">
+        <div class="col-hero-lower">
+          <p>Four families, each built around the way you want to feel. Choose one, and you will know it when a scent stops you.</p>
+          <a class="btn btn-pill" href="404.html">Shop collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections" id="floral">
+      <div class="wrap">
+        <article class="col-row">
+          <div class="col-visual">
+            <div class="col-frame">
+              <img class="col-arch" src="Images/floral-revere-1.webp" alt="A glass bottle among dried pink roses on ivory lace">
+              <img class="col-round" src="Images/floral-revere-2.webp" alt="Pale roses laid across a red book beside a perfume bottle">
+            </div>
+          </div>
+          <div class="col-copy">
+            <h2>Floral Reverie</h2>
+            <p>A garden at the hour before rain, when every petal holds its breath. Floral Reverie is made of blooms that feel close and unhurried, soft against the skin and never sweet.</p>
+            <blockquote>Flowers, but only the quiet ones.</blockquote>
+            <a class="btn btn-pill" href="404.html">Explore collections</a>
+          </div>
+        </article>
+
+        <article class="col-row is-flip" id="woody">
+          <div class="col-visual">
+            <div class="col-frame">
+              <img class="col-arch" src="Images/woody-earthy-1.webp" alt="An amber bottle on a wooden stand with pine cones and spice">
+              <img class="col-round" src="Images/woody-earthy-2.webp" alt="A warm brown bottle with a black and gold cap">
+            </div>
+          </div>
+          <div class="col-copy">
+            <h2>Woody &amp; Earthy</h2>
+            <p>Warm shelter. Dry wood, and the scent of a drawer after rain. It settles close, then stays — unhurried, certain, the one you reach for when the evening goes quiet.</p>
+            <blockquote>Rooted, unhurried and quietly confident.</blockquote>
+            <a class="btn btn-pill" href="404.html">Explore collections</a>
+          </div>
+        </article>
+
+        <article class="col-row" id="fresh">
+          <div class="col-visual">
+            <div class="col-frame">
+              <img class="col-arch" src="Images/fresh aqautic-1.webp" alt="A clear bottle in pale blue water, ringed with seashells">
+              <img class="col-round" src="Images/fresh aquatic-2.webp" alt="A deep blue bottle against cool water">
+            </div>
+          </div>
+          <div class="col-copy">
+            <h2>Fresh &amp; Aquatic</h2>
+            <p>Salt water on warm skin, the first minutes of light. A pale citrus over the harbour. Bright as opening a window. It clears the air, then stays, as if the tide had left water on your skin.</p>
+            <blockquote>The feeling of a clear horizon.</blockquote>
+            <a class="btn btn-pill" href="404.html">Explore collections</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tonight" id="tonight">
+      <div class="wrap">
+        <div class="tonight-head">
+          <h2>Tonight, wear</h2>
+          <p>Pick the hour, not the ingredient. The family follows from there.</p>
+        </div>
+        <div class="tonight-grid">
+          <a href="404.html">
+            <span>Late morning</span>
+            <strong>Floral Reverie</strong>
+            <em>Soft, close, never sweet.</em>
+          </a>
+          <a href="404.html">
+            <span>After dusk</span>
+            <strong>Woody &amp; Earthy</strong>
+            <em>Dry wood, a quiet room.</em>
+          </a>
+          <a href="404.html">
+            <span>Open air</span>
+            <strong>Fresh &amp; Aquatic</strong>
+            <em>Salt, citrus, first light.</em>
+          </a>
+          <a href="404.html">
+            <span>Undecided</span>
+            <strong>The full shelf</strong>
+            <em>Twelve bottles, one sitting.</em>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer" id="layer">
+      <div class="wrap">
+        <h2>Two families, worn together</h2>
+        <div class="layer-grid">
+          <article>
+            <p>Floral + Woody</p>
+            <h3>Rose on sandalwood</h3>
+            <p>Spray Floral Reverie on skin and a woody mist on the scarf. The flower stays soft. The wood keeps it past midnight.</p>
+          </article>
+          <article>
+            <p>Fresh + Amber</p>
+            <h3>Citrus over resin</h3>
+            <p>Open with Fresh &amp; Aquatic, then a touch of amber at the collar. Bright at the door. Warm by the time you sit down.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter" id="letter">
+      <div class="wrap letter-inner">
+        <p class="letter-kicker">Join the House</p>
+        <h2>10% off your <span class="letter-accent">first bottle</span></h2>
+        <p>Early access to new releases, private sales and scent tips — once a fortnight, never spam.</p>
+        <form class="letter-form" id="letter-form" novalidate>
+          <label class="sr" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="Stackly home">
+          <img src="Images/stackly-white.webp" alt="" width="97" height="40">
+        </a>
+        <p>Fragrances composed to linger, bottled in small batches at the atelier.</p>
+        <div class="socials">
+          <a href="404.html" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="404.html" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="404.html" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M11 18.5c.4-1.4.8-2.8.6-4.1-.2-.6-.5-1.2-.2-1.8.4-.8 1.2-.3 1.4.4.2.8 0 1.8-.2 2.6 1.4-.2 2.4-1.4 2.4-3.1 0-2-1.6-3.6-4.2-3.6-3 0-4.6 2.2-4.6 4.2 0 .9.4 1.8 1.2 2.1.2.1.3 0 .3-.2l.2-.8c0-.1 0-.2-.1-.3-.3-.4-.5-.9-.5-1.5 0-1.5 1.1-3 3-3 1.6 0 2.8 1.1 2.8 2.8 0 1.8-.9 3.1-2.1 3.1-.7 0-1.2-.6-1-1.3.2-.8.6-1.7.6-2.3 0-.5-.3-1-.9-1-.7 0-1.3.7-1.3 1.7 0 .6.2 1 .2 1l-1.2 5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="404.html" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="story.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="404.html">Shipping</a></li>
+          <li><a href="404.html">Returns</a></li>
+          <li><a href="404.html">Skin consultation</a></li>
+          <li><a href="404.html">Gift cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <a href="404.html">info@stackly.com</a>
+        </p>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h3l1.2 3-1.8 1.1a12 12 0 0 0 5 5l1.1-1.8 3 1.2v3A2 2 0 0 1 17.4 18 14.5 14.5 0 0 1 6 6.6 2 2 0 0 1 8 4.5z"/></svg>
+          <a href="404.html">+91 98765 43210</a>
+        </p>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          <span>Evolve Studio, 4th Floor,<br>Begur – Koppa Rd,<br>In front of SNN Raj Serenity,<br>Suraksha Nagar, Yelenahalli,<br>Begur, Bengaluru,<br>Karnataka –560068</span>
+        </p>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Rosely. All rights reserved.</p>
+      <p>
+        <a href="404.html">Privacy</a>
+        <a href="404.html">Terms</a>
+        <a href="404.html">FAQ</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <header class="drawer-head">
+      <h2 id="cart-title">Your bag</h2>
+      <button class="icon-btn" type="button" data-close="cart" aria-label="Close bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="cart-body"></div>
+    <footer class="drawer-foot" id="cart-foot" hidden>
+      <p><span>Subtotal</span><strong id="cart-subtotal">$0</strong></p>
+      <button class="btn btn-solid btn-block" id="checkout" type="button">Reserve bottles</button>
+      <p class="fine">A preview boutique. Your list stays on this device.</p>
+    </footer>
+  </aside>
+
+  <aside class="drawer search-drawer" id="search-drawer" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+    <header class="drawer-head">
+      <h2 id="search-title">Search</h2>
+      <button class="icon-btn" type="button" data-close="search" aria-label="Close search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body">
+      <label class="sr" for="search-input">Search fragrances</label>
+      <input id="search-input" type="search" placeholder="Try rose, amber, santal…" autocomplete="off">
+      <ul class="search-results" id="search-results"></ul>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="account-drawer" role="dialog" aria-modal="true" aria-labelledby="account-title" hidden>
+    <header class="drawer-head">
+      <h2 id="account-title">Account</h2>
+      <button class="icon-btn" type="button" data-close="account" aria-label="Close account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body">
+      <form id="account-form" novalidate>
+        <p id="account-hello">Save a name for this browser. No password, no account server.</p>
+        <label for="account-name">Name</label>
+        <input id="account-name" name="name" type="text" placeholder="Your name" required>
+        <button class="btn btn-solid btn-block" type="submit">Save</button>
+        <p class="form-msg" id="account-msg" role="status"></p>
+      </form>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="info-drawer" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <header class="drawer-head">
+      <h2 id="info-title">Help</h2>
+      <button class="icon-btn" type="button" data-close="info" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="info-body"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js?v=webp"></script>
+</body>
+</html>

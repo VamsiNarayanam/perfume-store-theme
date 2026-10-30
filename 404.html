@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — Rosely</title>
+  <meta name="description" content="This Rosely page is not on the shelf. Return home or go back to the previous page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
+</head>
+<body data-page="missing">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <main id="main" class="page">
+    <div class="wrap missing">
+      <p class="eyebrow">Missing</p>
+      <p class="missing-code">404</p>
+      <h1 class="page-title">Page not found</h1>
+      <p class="page-lead">This address is not on the shelf. Return home, or step back to the page you came from.</p>
+      <div class="actions missing-actions">
+        <a class="btn btn-solid" href="index.html">Back home</a>
+        <button class="btn btn-line" id="go-back" type="button">Go back</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="info-drawer" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <header class="drawer-head">
+      <h2 id="info-title">Help</h2>
+      <button class="icon-btn" type="button" data-close="info" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="info-body"></div>
+  </aside>
+  <script src="js/pages.js?v=webp"></script>
+  <script>
+    document.getElementById("go-back").addEventListener("click", () => {
+      const sameSite = document.referrer && new URL(document.referrer, location.href).origin === location.origin;
+      if (sameSite) history.back();
+      else location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

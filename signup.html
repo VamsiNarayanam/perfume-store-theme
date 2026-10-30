@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup — Stackly</title>
+  <meta name="description" content="Create a Stackly client or atelier admin account on this browser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=reveal">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <img src="Images/signup-panel.webp" alt="">
+      <div class="auth-visual-copy">
+        <h1>Create your<br>account</h1>
+        <p>Set up access to your reporting dashboard and get a capacity plan started.</p>
+        <a class="auth-home" href="index.html"><span aria-hidden="true">←</span> Back to home</a>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <a class="auth-mark" href="index.html" aria-label="Stackly home">
+        <img src="Images/stackly-white.webp" alt="" width="97" height="40">
+      </a>
+      <h2>Signup</h2>
+      <form id="signup-form" novalidate>
+        <fieldset class="auth-role">
+          <legend>Account</legend>
+          <label><input type="radio" name="role" value="client" checked> Client</label>
+          <label><input type="radio" name="role" value="admin"> Admin</label>
+        </fieldset>
+        <label class="auth-field" for="signup-name">
+          <span>Name</span>
+          <input id="signup-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+        </label>
+        <label class="auth-field" for="signup-email">
+          <span>Email</span>
+          <input id="signup-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+        </label>
+        <label class="auth-field" for="signup-password">
+          <span>Password</span>
+          <input id="signup-password" name="password" type="password" placeholder="Enter your password" autocomplete="new-password" required>
+        </label>
+        <label class="auth-field" for="signup-confirm">
+          <span>Re-enter password</span>
+          <input id="signup-confirm" name="confirm" type="password" placeholder="Re-enter your password" autocomplete="new-password" required>
+        </label>
+        <label class="auth-check auth-terms">
+          <input id="signup-terms" type="checkbox" required>
+          <span>I have read and agree to the <a href="404.html">Terms and conditions</a></span>
+        </label>
+        <button class="auth-submit" type="submit">Signup</button>
+        <p class="form-msg" id="signup-msg" role="status"></p>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+      <p class="auth-or">Or continue with</p>
+      <button class="auth-social" type="button" data-social="apple">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.3-.1-2.6.8-3.3.8s-1.7-.8-2.9-.8c-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.9.7 1.9-1.1 2.6-2.2c.8-1.2 1.1-2.3 1.2-2.4-.1 0-2.2-.8-2.2-3.6zM14.7 6.2c.6-.7 1-1.7.9-2.7-1 .1-2.1.6-2.7 1.4-.6.7-1.1 1.7-.9 2.6 1 .1 2.1-.5 2.7-1.3z"/></svg>
+        Login with Apple
+      </button>
+      <button class="auth-social" type="button" data-social="google">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4c-.2 1.2-.9 2.2-2 2.9v2.4h3.2c1.9-1.7 3-4.3 3-7.1z"/><path fill="#34A853" d="M12 22c2.7 0 5-1 6.6-2.6l-3.2-2.4c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.5C4.7 19.8 8.1 22 12 22z"/><path fill="#FBBC05" d="M6.4 13.9a6 6 0 0 1 0-3.8V7.6H3.1a10 10 0 0 0 0 8.8l3.3-2.5z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 2.9 14.7 2 12 2 8.1 2 4.7 4.2 3.1 7.6l3.3 2.5C7.2 7.7 9.4 5.9 12 5.9z"/></svg>
+        Login with google
+      </button>
+    </section>
+  </main>
+  <script src="js/auth.js?v=flow2"></script>
+</body>
+</html>

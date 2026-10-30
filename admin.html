@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier desk — Rosely</title>
+  <meta name="description" content="Rosely atelier desk: reservations on this device, the house catalog, and new fragrances added to the shop.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=user">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
+</head>
+<body class="dashboard-page" data-page="admin">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="dash-backdrop" id="dash-backdrop" hidden></div>
+
+  <div class="dash-shell">
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Admin sidebar">
+      <a class="dash-logo" href="admin.html" aria-label="Stackly home">
+        <img src="Images/stackly-white.webp" alt="Stackly" width="120" height="40">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2c1.8 3.6 1.8 5.6 0 8.2-1.8-2.6-1.8-4.6 0-8.2zm0 25.6c-1.8-3.6-1.8-5.6 0-8.2 1.8 2.6 1.8 4.6 0 8.2zM3.2 16c3.6-1.8 5.6-1.8 8.2 0-2.6 1.8-4.6 1.8-8.2 0zm25.6 0c-3.6 1.8-5.6 1.8-8.2 0 2.6-1.8 4.6-1.8 8.2 0z"/></svg>
+      </a>
+
+      <p class="dash-console-label">Atelier console</p>
+      <ul class="dash-nav">
+        <li><a href="#overview" class="is-active">Overview</a></li>
+        <li><a href="#reservations">Reservations</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#product">Add product</a></li>
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#consults">Consultations</a></li>
+        <li><a href="#gifts">Gift cards</a></li>
+        <li><a href="#account">Account</a></li>
+      </ul>
+
+      <div class="dash-sidebar-foot">
+        <div class="dash-user" id="dash-user" hidden>
+          <p class="dash-user-name" id="dash-user-name"></p>
+          <p class="dash-user-email" id="dash-user-email"></p>
+        </div>
+        <a class="dash-leave" href="login.html">logout</a>
+      </div>
+    </aside>
+
+    <div class="dash-main" id="main">
+      <header class="dash-mobile-bar">
+        <button class="icon-btn menu-toggle" id="dash-menu-btn" type="button" aria-expanded="false" aria-controls="dash-sidebar" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+        <p class="dash-bar-title" id="dash-bar-title">Overview</p>
+      </header>
+
+      <header class="dash-topbar">
+        <div>
+          <h1>Atelier operations</h1>
+          <p>Reservations, the catalog, and the letter list from this browser.</p>
+        </div>
+        <div class="dash-actions">
+          <a class="btn btn-solid" id="open-cart" href="404.html">Open bag <span class="bag-count" id="bag-count" hidden>0</span></a>
+          <a class="btn btn-line" href="404.html">View the shop</a>
+        </div>
+      </header>
+
+      <section class="dash-block" id="overview">
+        <section class="stat-grid" aria-label="Atelier totals">
+          <article class="stat"><span>Fragrances</span><strong id="stat-products">0</strong></article>
+          <article class="stat"><span>Open</span><strong id="stat-open">0</strong></article>
+          <article class="stat"><span>Reserved</span><strong id="stat-revenue">$0</strong></article>
+          <article class="stat"><span>Letter</span><strong id="stat-list">0</strong></article>
+        </section>
+      </section>
+
+      <section class="dash-block" id="reservations">
+        <article class="panel">
+          <h2>Reservations</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr><th>Order</th><th>Bottles</th><th>Total</th><th>Status</th><th>Update</th></tr>
+              </thead>
+              <tbody id="admin-orders"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="dash-block" id="catalog">
+        <article class="panel">
+          <h2>Catalog</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr><th>Fragrance</th><th>Family</th><th>Price</th><th></th></tr>
+              </thead>
+              <tbody id="admin-catalog"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="dash-block" id="product">
+        <article class="panel">
+          <h2>Add product</h2>
+          <p class="fine">New bottles join the shop edit on this device.</p>
+          <form id="add-product" novalidate>
+            <div class="form-grid">
+              <label class="field" for="product-name">
+                <span>Name</span>
+                <input id="product-name" name="name" type="text" required placeholder="Peony Veil">
+              </label>
+              <label class="field" for="product-price">
+                <span>Price</span>
+                <input id="product-price" name="price" type="number" min="1" step="1" required placeholder="82">
+              </label>
+            </div>
+            <div class="form-grid">
+              <label class="field" for="product-cat">
+                <span>Family</span>
+                <select id="product-cat" name="cat">
+                  <option value="floral">Floral</option>
+                  <option value="woody">Woody</option>
+                  <option value="amber">Amber</option>
+                  <option value="fresh">Fresh</option>
+                </select>
+              </label>
+              <label class="field" for="product-img">
+                <span>Still</span>
+                <select id="product-img" name="img"></select>
+              </label>
+            </div>
+            <label class="field" for="product-note">
+              <span>Note</span>
+              <input id="product-note" name="note" type="text" placeholder="Peony, musk, pear">
+            </label>
+            <button class="btn btn-solid" type="submit">Add product</button>
+            <p class="form-msg" id="add-msg" role="status"></p>
+          </form>
+        </article>
+      </section>
+
+      <section class="dash-block" id="letter">
+        <article class="panel">
+          <h2>Letter</h2>
+          <div id="admin-list"></div>
+        </article>
+      </section>
+
+      <section class="dash-block" id="consults">
+        <article class="panel">
+          <h2>Consultations</h2>
+          <p class="fine">Skin consultations requested from this browser.</p>
+          <form id="consult-form" novalidate>
+            <div class="form-grid">
+              <label class="field" for="consult-name">
+                <span>Name</span>
+                <input id="consult-name" name="name" type="text" placeholder="Asha Menon" required>
+              </label>
+              <label class="field" for="consult-note">
+                <span>What they wear</span>
+                <input id="consult-note" name="note" type="text" placeholder="Soft florals that stay close" required>
+              </label>
+            </div>
+            <button class="btn btn-solid" type="submit">Add consultation</button>
+            <p class="form-msg" id="consult-msg" role="status"></p>
+          </form>
+          <div id="consult-list"></div>
+        </article>
+      </section>
+
+      <section class="dash-block" id="gifts">
+        <article class="panel">
+          <h2>Gift cards</h2>
+          <p class="fine">Cards issued from the atelier, kept on this device.</p>
+          <form id="gift-form" novalidate>
+            <div class="form-grid">
+              <label class="field" for="gift-name">
+                <span>For</span>
+                <input id="gift-name" name="name" type="text" placeholder="Recipient" required>
+              </label>
+              <label class="field" for="gift-amount">
+                <span>Amount</span>
+                <select id="gift-amount" name="amount">
+                  <option value="50">$50</option>
+                  <option value="100">$100</option>
+                  <option value="150">$150</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn btn-solid" type="submit">Issue card</button>
+            <p class="form-msg" id="gift-msg" role="status"></p>
+          </form>
+          <div id="gift-list"></div>
+        </article>
+      </section>
+
+      <section class="dash-block" id="account">
+        <article class="panel">
+          <h2>Atelier account</h2>
+          <p class="fine">Name and email for this desk. Saved on this browser.</p>
+          <form id="admin-account" novalidate>
+            <label class="field" for="admin-name">
+              <span>Name</span>
+              <input id="admin-name" name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label class="field" for="admin-email">
+              <span>Email</span>
+              <input id="admin-email" name="email" type="email" placeholder="atelier@stackly.com" autocomplete="email" required>
+            </label>
+            <button class="btn btn-solid" type="submit">Save</button>
+            <p class="form-msg" id="admin-account-msg" role="status"></p>
+          </form>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="info-drawer" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <header class="drawer-head">
+      <h2 id="info-title">Help</h2>
+      <button class="icon-btn" type="button" data-close="info" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="info-body"></div>
+  </aside>
+
+  <script src="js/pages.js?v=user"></script>
+</body>
+</html>

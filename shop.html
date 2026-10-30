@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Rosely</title>
+  <meta name="description" content="Find your signature scent. Shop Velours Noir, Ambre Doré, Rose Absolue, and the newest bottles from the house.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="logo" href="index.html" aria-label="Stackly home">
+        <img src="Images/stackly-white.webp" alt="" width="97" height="40">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="story.html">Our story</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn" id="open-search" aria-label="Search fragrances">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+        </button>
+        <a class="icon-btn" id="open-account" href="login.html" aria-label="Log in">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.4-3 3.8-4.4 7-4.4s5.6 1.4 7 4.4"/></svg>
+        </a>
+        <a class="icon-btn bag-btn" id="open-cart" href="cart.html" aria-label="Open bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8h11l-.8 11H7.3L6.5 8z"/><path d="M9 8V6.8A3 3 0 0 1 12 3.8 3 3 0 0 1 15 6.8V8"/></svg>
+          <span class="bag-count" id="bag-count" hidden>0</span>
+        </a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" hidden>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="collections.html">Collections</a>
+    <a href="story.html">Our story</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="cart.html">Your bag</a>
+  </nav>
+
+  <main id="main">
+    <section class="shop-hero" id="shop-hero">
+      <div class="wrap shop-hero-stage">
+        <h1>
+          <span class="shop-find">Find your</span>
+          <span class="shop-line-2">
+            <span class="shop-sig">Signature</span>
+            <span class="shop-scent">Scent</span>
+          </span>
+        </h1>
+        <img class="shop-hero-bottle" src="Images/shop-hero.webp" alt="A glass perfume bottle nestled in pink peonies and roses">
+        <div class="shop-hero-lower">
+          <p>Twelve fragrances across four families,<br>each in 30, 50 and 100 ml. Browse by family,<br>narrow by size and price, and save the ones<br>you want to return to.</p>
+          <div class="shop-hero-actions">
+            <a class="btn btn-pill" href="404.html">Shop collections</a>
+            <a class="shop-discover" href="404.html">Discover</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="begin" id="families">
+      <div class="wrap">
+        <div class="begin-head">
+          <h2>Begin with what you love</h2>
+          <p>Choose a family to filter the collection below.<br>Choose it again to see everything.</p>
+        </div>
+        <div class="begin-grid">
+          <article class="product best-card" id="product-velours" data-cat="floral" data-id="velours" data-name="Velours Noir" data-price="240" data-img="Images/bestsellers/velours.webp" data-note="Black rose · Oud · Vanilla">
+            <div class="best-media">
+              <img src="Images/bestsellers/velours.webp" alt="Two gold perfume bottles, one pale and one patterned">
+            </div>
+            <h3>Velours Noir</h3>
+            <p class="best-note">Black rose · Oud · Vanilla</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Velours Noir to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-ambre-dore" data-cat="amber" data-id="ambre-dore" data-name="Ambre Doré" data-price="240" data-img="Images/bestsellers/ambre.webp" data-note="Saffron · Amber resin · Tonka">
+            <div class="best-media">
+              <img src="Images/bestsellers/ambre.webp" alt="A round amber perfume bottle with a gold cap">
+            </div>
+            <h3>Ambre Doré</h3>
+            <p class="best-note">Saffron · Amber resin · Tonka</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Ambre Doré to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-absolue" data-cat="floral" data-id="absolue" data-name="Rose Absolue" data-price="240" data-img="Images/bestsellers/absolue.webp" data-note="Damask rose · Peony · White musk">
+            <div class="best-media">
+              <img src="Images/bestsellers/absolue.webp" alt="A floral perfume bottle lying on pink blossom fabric">
+            </div>
+            <h3>Rose Absolue</h3>
+            <p class="best-note">Damask rose · Peony · White musk</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Rose Absolue to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-aube" data-cat="fresh" data-id="aube" data-name="Aube Marine" data-price="240" data-img="Images/bestsellers/aube.webp" data-note="Yuzu · Sea salt · Vetiver">
+            <div class="best-media">
+              <img src="Images/bestsellers/aube.webp" alt="A pale pink bottle labeled Lunar Perfumes July Hairmist">
+            </div>
+            <h3>Aube Marine</h3>
+            <p class="best-note">Yuzu · Sea salt · Vetiver</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Aube Marine to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-santal" data-cat="woody" data-id="santal" data-name="Santal Éclat" data-price="240" data-img="Images/santal eclat.webp" data-note="Sandalwood · Cardamom · Cedar">
+            <div class="best-media">
+              <img src="Images/santal eclat.webp" alt="Santal Éclat bottles, one green and one amber">
+            </div>
+            <h3>Santal Éclat</h3>
+            <p class="best-note">Sandalwood · Cardamom · Cedar</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Santal Éclat to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-figue" data-cat="woody" data-id="figue" data-name="Figue Éternelle" data-price="240" data-img="Images/Etternelle.webp" data-note="Green fig · Coconut milk · Sandalwood">
+            <div class="best-media">
+              <img src="Images/Etternelle.webp" alt="Figue Éternelle bottle with a black cap on warm wood">
+            </div>
+            <h3>Figue Éternelle</h3>
+            <p class="best-note">Green fig · Coconut milk · Sandalwood</p>
+            <div class="best-buy">
+              <p class="price">$240</p>
+              <button class="add best-plus" type="button" aria-label="Add Figue Éternelle to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-block shop-bestsellers" id="bestsellers">
+      <div class="wrap">
+        <div class="best-head">
+          <h2>Bestsellers</h2>
+          <p>Four fragrances our clients return to, one from each family.</p>
+        </div>
+
+        <div class="best-row best-row-feature">
+          <article class="product best-card" id="product-best-velours" data-cat="amber" data-id="best-velours" data-name="Velours Noir" data-price="525" data-img="Images/bestsellers/velours.webp" data-note="Rich, syrupy and bright. Our house blend, pulled short and sweet.">
+            <div class="best-media">
+              <img src="Images/bestsellers/velours.webp" alt="Two gold perfume bottles, one pale and one patterned">
+            </div>
+            <h3>Velours Noir</h3>
+            <p class="best-note">Rich, syrupy and bright. Our house blend, pulled short and sweet.</p>
+            <div class="best-buy">
+              <p class="price">$525</p>
+              <button class="add best-plus" type="button" aria-label="Add Velours Noir to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-best-absolue" data-cat="floral" data-id="best-absolue" data-name="Rose Absolue" data-price="525" data-img="Images/bestsellers/absolue.webp" data-note="Velvety microfoam over a double ristretto, naturally sweet and smooth from first sip to last.">
+            <div class="best-media">
+              <img src="Images/bestsellers/absolue.webp" alt="A floral perfume bottle lying on pink blossom fabric">
+            </div>
+            <h3>Rose Absolue</h3>
+            <p class="best-note">Velvety microfoam over a double ristretto, naturally sweet and smooth from first sip to last.</p>
+            <div class="best-buy">
+              <p class="price">$525</p>
+              <button class="add best-plus" type="button" aria-label="Add Rose Absolue to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="best-row best-row-even">
+          <article class="product best-card" id="product-best-aube" data-cat="fresh" data-id="best-aube" data-name="Aube Marine" data-price="525" data-img="Images/bestsellers/aube.webp" data-note="Equal parts espresso and warm milk for a balanced, silky sip.">
+            <div class="best-media">
+              <img src="Images/bestsellers/aube.webp" alt="A pale pink bottle labeled Lunar Perfumes July Hairmist">
+            </div>
+            <h3>Aube Marine</h3>
+            <p class="best-note">Equal parts espresso and warm milk for a balanced, silky sip.</p>
+            <div class="best-buy">
+              <p class="price">$525</p>
+              <button class="add best-plus" type="button" aria-label="Add Aube Marine to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product best-card" id="product-best-ambre" data-cat="amber" data-id="best-ambre" data-name="Ambre Doré" data-price="525" data-img="Images/bestsellers/ambre.webp" data-note="Thick, airy foam with a cocoa-dusted finish.">
+            <div class="best-media">
+              <img src="Images/bestsellers/ambre.webp" alt="A round amber perfume bottle with a gold cap">
+            </div>
+            <h3>Ambre Doré</h3>
+            <p class="best-note">Thick, airy foam with a cocoa-dusted finish.</p>
+            <div class="best-buy">
+              <p class="price">$525</p>
+              <button class="add best-plus" type="button" aria-label="Add Ambre Doré to bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="arrive" id="arrivals">
+      <div class="wrap">
+        <div class="arrive-head">
+          <h2>New arrivals</h2>
+          <p>The season's three newest fragrances, in limited<br>first batches.</p>
+        </div>
+        <div class="arrive-grid">
+          <article class="product arrive-card" id="product-iris" data-cat="floral" data-id="iris" data-name="Iris Poudré" data-price="240" data-img="Images/iris poudre.webp" data-note="Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished">
+            <div class="arrive-media">
+              <img src="Images/iris poudre.webp" alt="Iris Poudré bottle among gold ornaments">
+            </div>
+            <h3>Iris Poudré</h3>
+            <p class="arrive-note">Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished</p>
+            <div class="arrive-buy">
+              <p class="price">$240</p>
+              <button class="add arrive-add" type="button">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="product arrive-card" id="product-santal-new" data-cat="woody" data-id="santal-new" data-name="Santal Éclat" data-price="240" data-img="Images/santal eclat.webp" data-note="Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished">
+            <div class="arrive-media">
+              <img src="Images/santal eclat.webp" alt="Santal Éclat bottles, one pale green and one amber">
+            </div>
+            <h3>Santal Éclat</h3>
+            <p class="arrive-note">Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished</p>
+            <div class="arrive-buy">
+              <p class="price">$240</p>
+              <button class="add arrive-add" type="button">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="product arrive-card" id="product-figue-new" data-cat="woody" data-id="figue-new" data-name="Figue Éternelle" data-price="240" data-img="Images/Etternelle.webp" data-note="Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished">
+            <div class="arrive-media">
+              <img src="Images/Etternelle.webp" alt="Figue Éternelle bottle with a black cap on warm wood">
+            </div>
+            <h3>Figue Éternelle</h3>
+            <p class="arrive-note">Orris butter and violet leaf on cashmere musk. Powdery, quiet and polished</p>
+            <div class="arrive-buy">
+              <p class="price">$240</p>
+              <button class="add arrive-add" type="button">Add to bag</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sizes" id="sizes">
+      <div class="wrap">
+        <div class="sizes-head">
+          <h2>Three sizes, one formula</h2>
+          <p>Every fragrance is bottled the same way. Only the time you want it to last changes.</p>
+        </div>
+        <div class="size-grid">
+          <article>
+            <p class="size-ml">30 ml</p>
+            <h3>The trial</h3>
+            <p>A month of evenings. Enough to learn how it sits on your skin before you commit.</p>
+          </article>
+          <article class="is-mid">
+            <p class="size-ml">50 ml</p>
+            <h3>The daily</h3>
+            <p>The bottle most clients keep on the dresser. One season, worn close.</p>
+          </article>
+          <article class="is-tall">
+            <p class="size-ml">100 ml</p>
+            <h3>The house</h3>
+            <p>For the scent you already know by heart. The one you replace before it runs out.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sample-band" id="samples">
+      <div class="wrap sample-inner">
+        <div>
+          <h2>Start with a single note</h2>
+          <p>If the full bottle can wait, begin with the accord you already lean toward.</p>
+        </div>
+        <ul>
+          <li><a href="404.html">Floral <span>Rose, iris, peony</span></a></li>
+          <li><a href="404.html">Amber <span>Resin, tonka, warmth</span></a></li>
+          <li><a href="404.html">Woody <span>Santal, fig, cedar</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="letter" id="letter">
+      <div class="wrap letter-inner">
+        <p class="letter-kicker">Join the House</p>
+        <h2>10% off your <span class="letter-accent">first bottle</span></h2>
+        <p>Early access to new releases, private sales and scent tips — once a fortnight, never spam.</p>
+        <form class="letter-form" id="letter-form" novalidate>
+          <label class="sr" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="Stackly home">
+          <img src="Images/stackly-white.webp" alt="" width="97" height="40">
+        </a>
+        <p>Fragrances composed to linger, bottled in small batches at the atelier.</p>
+        <div class="socials">
+          <a href="404.html" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="404.html" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="404.html" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M11 18.5c.4-1.4.8-2.8.6-4.1-.2-.6-.5-1.2-.2-1.8.4-.8 1.2-.3 1.4.4.2.8 0 1.8-.2 2.6 1.4-.2 2.4-1.4 2.4-3.1 0-2-1.6-3.6-4.2-3.6-3 0-4.6 2.2-4.6 4.2 0 .9.4 1.8 1.2 2.1.2.1.3 0 .3-.2l.2-.8c0-.1 0-.2-.1-.3-.3-.4-.5-.9-.5-1.5 0-1.5 1.1-3 3-3 1.6 0 2.8 1.1 2.8 2.8 0 1.8-.9 3.1-2.1 3.1-.7 0-1.2-.6-1-1.3.2-.8.6-1.7.6-2.3 0-.5-.3-1-.9-1-.7 0-1.3.7-1.3 1.7 0 .6.2 1 .2 1l-1.2 5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="404.html" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="story.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="404.html">Shipping</a></li>
+          <li><a href="404.html">Returns</a></li>
+          <li><a href="404.html">Skin consultation</a></li>
+          <li><a href="404.html">Gift cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <a href="404.html">info@stackly.com</a>
+        </p>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h3l1.2 3-1.8 1.1a12 12 0 0 0 5 5l1.1-1.8 3 1.2v3A2 2 0 0 1 17.4 18 14.5 14.5 0 0 1 6 6.6 2 2 0 0 1 8 4.5z"/></svg>
+          <a href="404.html">+91 98765 43210</a>
+        </p>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          <span>Evolve Studio, 4th Floor,<br>Begur – Koppa Rd,<br>In front of SNN Raj Serenity,<br>Suraksha Nagar, Yelenahalli,<br>Begur, Bengaluru,<br>Karnataka –560068</span>
+        </p>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Rosely. All rights reserved.</p>
+      <p>
+        <a href="404.html">Privacy</a>
+        <a href="404.html">Terms</a>
+        <a href="404.html">FAQ</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <header class="drawer-head">
+      <h2 id="cart-title">Your bag</h2>
+      <button class="icon-btn" type="button" data-close="cart" aria-label="Close bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="cart-body"></div>
+    <footer class="drawer-foot" id="cart-foot" hidden>
+      <p><span>Subtotal</span><strong id="cart-subtotal">$0</strong></p>
+      <button class="btn btn-solid btn-block" id="checkout" type="button">Reserve bottles</button>
+      <p class="fine">A preview boutique. Your list stays on this device.</p>
+    </footer>
+  </aside>
+
+  <aside class="drawer search-drawer" id="search-drawer" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+    <header class="drawer-head">
+      <h2 id="search-title">Search</h2>
+      <button class="icon-btn" type="button" data-close="search" aria-label="Close search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body">
+      <label class="sr" for="search-input">Search fragrances</label>
+      <input id="search-input" type="search" placeholder="Try rose, amber, santal…" autocomplete="off">
+      <ul class="search-results" id="search-results"></ul>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="account-drawer" role="dialog" aria-modal="true" aria-labelledby="account-title" hidden>
+    <header class="drawer-head">
+      <h2 id="account-title">Account</h2>
+      <button class="icon-btn" type="button" data-close="account" aria-label="Close account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body">
+      <form id="account-form" novalidate>
+        <p id="account-hello">Save a name for this browser. No password, no account server.</p>
+        <label for="account-name">Name</label>
+        <input id="account-name" name="name" type="text" placeholder="Your name" required>
+        <button class="btn btn-solid btn-block" type="submit">Save</button>
+        <p class="form-msg" id="account-msg" role="status"></p>
+      </form>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="info-drawer" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <header class="drawer-head">
+      <h2 id="info-title">Help</h2>
+      <button class="icon-btn" type="button" data-close="info" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" id="info-body"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js?v=webp"></script>
+</body>
+</html>
