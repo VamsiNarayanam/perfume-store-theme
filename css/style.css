@@ -3040,3 +3040,64 @@ body.dashboard-page { background: #fff4fa; }
   .auth-shell { grid-template-columns: 1fr; }
   .auth-visual { min-height: 420px; }
 }
+
+body.is-loading { overflow: hidden; }
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.22), transparent 34%),
+    var(--pink);
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+.preloader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preloader-logo {
+  width: min(220px, 64vw);
+  height: auto;
+  filter: drop-shadow(0 10px 24px rgba(90, 24, 52, 0.18));
+  animation: preloader-logo 1.6s ease-in-out infinite;
+}
+.preloader-label {
+  margin: -6px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.preloader-bar {
+  width: min(180px, 48vw);
+  height: 3px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.28);
+  overflow: hidden;
+}
+.preloader-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: #fff;
+  animation: preloader-fill 1.5s linear forwards;
+}
+@keyframes preloader-logo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes preloader-fill {
+  to { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader-logo,
+  .preloader-bar span { animation: none; }
+  .preloader-bar span { width: 100%; }
+}
