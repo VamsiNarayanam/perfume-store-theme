@@ -8,10 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
 </head>
-<body>
+<body class="is-loading">
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <img class="preloader-logo" src="Images/stackly-white.webp" alt="" width="220" height="90">
+    <p class="preloader-label">Loading</p>
+    <div class="preloader-bar" aria-hidden="true"><span></span></div>
+  </div>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -25,8 +31,6 @@
         <a href="collections.html">Collections</a>
         <a href="story.html">Our story</a>
         <a href="contact.html" aria-current="page">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Signup</a>
       </nav>
       <div class="header-tools">
         <button class="icon-btn" id="open-search" aria-label="Search fragrances">
@@ -53,8 +57,6 @@
     <a href="collections.html">Collections</a>
     <a href="story.html">Our story</a>
     <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-    <a href="signup.html">Signup</a>
     <a href="cart.html">Your bag</a>
   </nav>
 
@@ -335,6 +337,17 @@
   </aside>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/main.js?v=webp"></script>
+  <script src="js/main.js?v=namefix"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/motion.js?v=2"></script>
+  <script>
+    window.setTimeout(function () {
+      var el = document.getElementById("preloader");
+      if (!el) return;
+      el.classList.add("is-done");
+      document.body.classList.remove("is-loading");
+      window.setTimeout(function () { el.remove(); }, 400);
+    }, 1500);
+  </script>
 </body>
 </html>

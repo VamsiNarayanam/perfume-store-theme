@@ -49,10 +49,26 @@ function webpPath(value) {
   return String(value || "").replace(/\.(png|jpe?g)$/i, ".webp");
 }
 
+function personalNames() {
+  const names = new Set();
+  const add = (value) => {
+    const name = String(value || "").trim().toLowerCase();
+    if (name) names.add(name);
+  };
+  add(localStorage.getItem("rosely-name"));
+  const accounts = readJson("rosely-accounts", []);
+  if (Array.isArray(accounts)) accounts.forEach((account) => add(account && account.name));
+  add(readJson("rosely-delivery", {})?.name);
+  return names;
+}
+
 function extras() {
   const list = readJson("rosely-extras", []);
   if (!Array.isArray(list)) return [];
-  return list.filter((item) => item && item.id && item.name).map((item) => ({ ...item, img: webpPath(item.img) }));
+  const people = personalNames();
+  const kept = list.filter((item) => item && item.id && item.name && !people.has(String(item.name).trim().toLowerCase()));
+  if (kept.length !== list.length) localStorage.setItem("rosely-extras", JSON.stringify(kept));
+  return kept.map((item) => ({ ...item, img: webpPath(item.img) }));
 }
 
 function catalog() {
@@ -440,6 +456,10 @@ function initAdmin() {
     const msg = $("#add-msg");
     const name = $("#product-name").value.trim();
     const price = Number($("#product-price").value);
+    if (personalNames().has(name.toLowerCase())) {
+      msg.textContent = "That is your account name. Give the fragrance its own name.";
+      return;
+    }
     const cat = $("#product-cat").value;
     const note = $("#product-note").value.trim();
     const img = $("#product-img").value;

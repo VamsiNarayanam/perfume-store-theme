@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
 </head>
@@ -24,14 +25,12 @@
         <a href="collections.html">Collections</a>
         <a href="story.html">Our story</a>
         <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Signup</a>
       </nav>
       <div class="header-tools">
         <a class="icon-btn" href="shop.html" aria-label="Search fragrances">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
         </a>
-        <a class="icon-btn" href="client.html" aria-label="Client dashboard">
+        <a class="icon-btn" href="login.html" aria-label="Client dashboard">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.4-3 3.8-4.4 7-4.4s5.6 1.4 7 4.4"/></svg>
         </a>
         <a class="icon-btn bag-btn" id="open-cart" href="cart.html" aria-label="Open bag" aria-current="page">
@@ -51,8 +50,6 @@
     <a href="collections.html">Collections</a>
     <a href="story.html">Our story</a>
     <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-    <a href="signup.html">Signup</a>
     <a href="cart.html">Your bag</a>
   </nav>
 
@@ -177,7 +174,9 @@
     </header>
     <div class="drawer-body" id="info-body"></div>
   </aside>
-  <script src="js/pages.js?v=webp"></script>
+  <script src="js/pages.js?v=namefix"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/motion.js?v=2"></script>
   <script>
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("mobile-nav");

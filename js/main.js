@@ -64,6 +64,13 @@ function money(n) {
   return `$${n}`;
 }
 
+function scrollToCard(card) {
+  if (!card) return;
+  card.scrollIntoView({ behavior: "smooth", block: "center" });
+  card.classList.add("is-flash");
+  setTimeout(() => card.classList.remove("is-flash"), 1600);
+}
+
 function toast(message) {
   const el = $("#toast");
   el.textContent = message;
@@ -241,9 +248,7 @@ function renderSearch(query) {
     btn.addEventListener("click", () => {
       closeDrawers();
       applyFilter("all");
-      card.scrollIntoView({ behavior: "smooth", block: "center" });
-      card.classList.add("is-flash");
-      setTimeout(() => card.classList.remove("is-flash"), 1600);
+      scrollToCard(card);
     });
     li.appendChild(btn);
     list.appendChild(li);
@@ -402,10 +407,7 @@ $$("[data-jump]").forEach((btn) => {
   btn.addEventListener("click", () => {
     applyFilter("all");
     const card = $(`#product-${btn.dataset.jump}`);
-    if (!card) return;
-    card.scrollIntoView({ behavior: "smooth", block: "center" });
-    card.classList.add("is-flash");
-    setTimeout(() => card.classList.remove("is-flash"), 1600);
+    scrollToCard(card);
   });
 });
 
@@ -525,12 +527,33 @@ $$(".desktop-nav a, .mobile-nav a").forEach((link) => {
   });
 });
 
+function personalNames() {
+  const names = new Set();
+  const add = (value) => {
+    const name = String(value || "").trim().toLowerCase();
+    if (name) names.add(name);
+  };
+  add(localStorage.getItem("rosely-name"));
+  try {
+    const accounts = JSON.parse(localStorage.getItem("rosely-accounts") || "[]");
+    if (Array.isArray(accounts)) accounts.forEach((account) => add(account && account.name));
+  } catch (_) { /* ignore broken storage */ }
+  try {
+    const delivery = JSON.parse(localStorage.getItem("rosely-delivery") || "null");
+    add(delivery && delivery.name);
+  } catch (_) { /* ignore broken storage */ }
+  return names;
+}
+
 function mountExtraProducts() {
   const grid = $("#product-grid");
   if (!grid) return;
   let extras = [];
   try { extras = JSON.parse(localStorage.getItem("rosely-extras") || "[]"); } catch (_) { extras = []; }
-  extras.forEach((product) => {
+  const people = personalNames();
+  const kept = extras.filter((product) => !people.has(String(product?.name || "").trim().toLowerCase()));
+  if (kept.length !== extras.length) localStorage.setItem("rosely-extras", JSON.stringify(kept));
+  kept.forEach((product) => {
     if (!product?.id || $(`#product-${CSS.escape(product.id)}`)) return;
     const card = document.createElement("article");
     card.className = "product";
