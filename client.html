@@ -57,8 +57,8 @@
           <p id="client-hello">Welcome back. Saved scents, your bag, and reservations stay on this device.</p>
         </div>
         <div class="dash-actions">
-          <a class="btn btn-solid" id="open-cart" href="404.html">Open bag <span class="bag-count" id="bag-count" hidden>0</span></a>
-          <a class="btn btn-line" href="404.html">Shop the edit</a>
+          <a class="btn btn-solid" id="open-cart" href="cart.html">Open bag <span class="bag-count" id="bag-count" hidden>0</span></a>
+          <a class="btn btn-line" href="shop.html">Shop the edit</a>
         </div>
       </header>
 
@@ -69,26 +69,60 @@
           <article class="stat"><span>Reservations</span><strong id="stat-orders">0</strong></article>
           <article class="stat"><span>Reserved</span><strong id="stat-spent">$0</strong></article>
         </section>
+        <article class="panel">
+          <h2>Your fragrance desk</h2>
+          <p class="fine">Your saved scents, bag, and reservations are kept together here and stored in this browser.</p>
+          <div class="dash-detail-grid">
+            <div><strong>Build your edit</strong><p>Save bottles you want to revisit, then add a favorite to your bag when you're ready.</p></div>
+            <div><strong>Keep track</strong><p>Check your reservation status and total without searching through the shop.</p></div>
+            <div><strong>Make it yours</strong><p>Save your details, skin notes, and delivery address for your next visit.</p></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h2>A few good next steps</h2>
+          <p class="fine">Make your portal more useful by keeping your shortlist and details up to date.</p>
+          <div class="dash-detail-grid">
+            <div><strong>Find your next scent</strong><p>Explore floral, amber, woody, and fresh compositions in the shop.</p><a class="text-btn" href="shop.html">Browse fragrances →</a></div>
+            <div><strong>Prepare a reservation</strong><p>Add a bottle to your bag to review its quantity and total before reserving.</p><a class="text-btn" href="cart.html">View your bag →</a></div>
+            <div><strong>Complete your details</strong><p>Add a contact email and delivery address so your preferences are ready for next time.</p><a class="text-btn" href="#profile">Edit your profile →</a></div>
+          </div>
+        </article>
       </section>
 
       <section class="dash-block" id="saved">
         <article class="panel">
           <h2>Saved scents</h2>
+          <p class="fine">A personal shortlist of bottles to compare and come back to. Add a saved scent to your bag whenever you are ready.</p>
           <div id="saved-list"></div>
+          <p class="fine">Looking for something new? Browse the shop to discover the full fragrance edit.</p>
+          <a class="btn btn-line" href="shop.html">Explore the shop</a>
+          <div class="dash-detail-grid">
+            <div><strong>Compare the opening</strong><p>Notice the first notes you smell when a fragrance is freshly applied.</p></div>
+            <div><strong>Give it time</strong><p>Let a scent settle on your skin before deciding whether it feels like you.</p></div>
+            <div><strong>Keep your shortlist fresh</strong><p>Remove bottles you no longer want to revisit so your saved edit stays useful.</p></div>
+          </div>
         </article>
       </section>
 
       <section class="dash-block" id="reservations">
         <article class="panel">
           <h2>Reservations</h2>
+          <p class="fine">Your reserved bottles and order status appear here. Orders move from Open to Packed and then Shipped as they are prepared.</p>
           <div id="client-orders"></div>
+          <div class="dash-detail-grid">
+            <div><strong>Open</strong><p>Your reservation has been received and is waiting to be prepared.</p></div>
+            <div><strong>Packed</strong><p>Your bottles are being carefully wrapped for their journey.</p></div>
+            <div><strong>Shipped</strong><p>Your reservation has left the atelier. Keep this page handy to review its details.</p></div>
+          </div>
+          <p class="fine">Need another bottle? Add it to your bag and place a separate reservation.</p>
+          <a class="btn btn-line" href="shop.html">Continue shopping</a>
         </article>
       </section>
 
       <section class="dash-block" id="profile">
         <article class="panel">
           <h2>Your name</h2>
-          <p class="fine">Saved in this browser only. The shop greets you with it.</p>
+          <p class="fine">Keep your contact details up to date. Your name personalizes your welcome, and both details are saved in this browser only.</p>
           <form id="account-form" novalidate>
             <label class="field" for="account-name">
               <span>Name</span>
@@ -101,13 +135,19 @@
             <button class="btn btn-solid" type="submit">Save</button>
             <p class="form-msg" id="account-msg" role="status"></p>
           </form>
+          <div class="dash-detail-grid">
+            <div><strong>Your name</strong><p>Used to make your welcome feel personal when you return to the shop.</p></div>
+            <div><strong>Your email</strong><p>Keep a valid email address with your profile for reference in this demo.</p></div>
+            <div><strong>Saved on this device</strong><p>Your profile is stored in this browser and is not synced to another device.</p></div>
+          </div>
         </article>
       </section>
 
       <section class="dash-block" id="notes">
         <article class="panel">
           <h2>Skin notes</h2>
-          <p class="fine">How a scent sits on you. Kept on this browser.</p>
+          <p class="fine">Record what you notice when you wear a fragrance. These private notes can help you remember how a scent develops on your skin.</p>
+          <p class="fine">You might note where you wore it, how long it lasted, or which notes stood out as it settled.</p>
           <form id="notes-form" novalidate>
             <label class="field" for="skin-note">
               <span>Note</span>
@@ -116,13 +156,19 @@
             <button class="btn btn-solid" type="submit">Save note</button>
             <p class="form-msg" id="notes-msg" role="status"></p>
           </form>
+          <div class="dash-detail-grid">
+            <div><strong>At first spray</strong><p>Write down the notes you notice straight away and how strong the opening feels.</p></div>
+            <div><strong>After it settles</strong><p>Check back later and record which parts of the fragrance remain on your skin.</p></div>
+            <div><strong>Where you wore it</strong><p>Note the occasion or season so you can remember when this scent works best for you.</p></div>
+          </div>
         </article>
       </section>
 
       <section class="dash-block" id="delivery">
         <article class="panel">
           <h2>Delivery</h2>
-          <p class="fine">Where a reserved set should arrive. Saved on this device only.</p>
+          <p class="fine">Save the name and address to use for a reserved set. Your delivery details stay on this device and can be updated at any time.</p>
+          <p class="fine">Bottles are wrapped for travel; delivery is complimentary on orders over $120.</p>
           <form id="delivery-form" novalidate>
             <label class="field" for="deliver-name">
               <span>Name on the parcel</span>
@@ -139,6 +185,11 @@
             <button class="btn btn-solid" type="submit">Save address</button>
             <p class="form-msg" id="delivery-msg" role="status"></p>
           </form>
+          <div class="dash-detail-grid">
+            <div><strong>Before saving</strong><p>Check that the recipient name, street, and city are all filled in correctly.</p></div>
+            <div><strong>Careful packaging</strong><p>Fragrance bottles are wrapped upright to help protect them on the way.</p></div>
+            <div><strong>Complimentary delivery</strong><p>Delivery is complimentary on orders over $120; other delivery costs are shown with your order.</p></div>
+          </div>
         </article>
       </section>
     </div>

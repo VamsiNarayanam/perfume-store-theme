@@ -1394,6 +1394,20 @@ body.dashboard-page { background: #fff4fa; }
   font-size: inherit;
 }
 .dash-block { margin-bottom: 18px; scroll-margin-top: 16px; }
+.dash-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.dash-detail-grid > div {
+  padding: 16px;
+  border: 1px solid #f0d4e4;
+  border-radius: 14px;
+  background: #fff8fc;
+}
+.dash-detail-grid strong { display: block; font-size: 15px; }
+.dash-detail-grid p { margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .desk-list { margin-top: 18px; }
 .desk-list li {
   display: flex;
@@ -1410,6 +1424,7 @@ body.dashboard-page { background: #fff4fa; }
 }
 @media (max-width: 980px) {
   .dash-shell { grid-template-columns: 1fr; }
+  .dash-detail-grid { grid-template-columns: 1fr; }
   .dash-main { padding-top: 0; }
   .dash-mobile-bar {
     position: sticky;

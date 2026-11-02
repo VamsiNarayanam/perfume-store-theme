@@ -577,22 +577,46 @@ function initSidebar() {
   });
 
   const links = [...document.querySelectorAll(".dash-nav a")];
+  const sections = [...document.querySelectorAll(".dash-block")];
   const barTitle = $("#dash-bar-title");
-  const mark = (hash) => {
+  const showSection = (hash, updateUrl = false) => {
+    const sectionId = hash.startsWith("#") ? hash.slice(1) : "";
+    const selectedSection = sections.find((section) => section.id === sectionId);
+    if (!selectedSection) return;
+
+    sections.forEach((section) => {
+      section.hidden = section !== selectedSection;
+    });
     links.forEach((link) => {
-      const on = hash && link.getAttribute("href") === hash;
+      const on = link.getAttribute("href") === hash;
       link.classList.toggle("is-active", on);
+      if (on) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
       if (on && barTitle) barTitle.textContent = link.textContent.trim();
     });
+    if (updateUrl) history.replaceState(history.state, "", hash);
   };
   links.forEach((link) => {
-    link.addEventListener("click", () => {
-      setOpen(false);
+    link.addEventListener("click", (event) => {
       const href = link.getAttribute("href") || "";
-      if (href.startsWith("#")) mark(href);
+      if (!sections.some((section) => `#${section.id}` === href)) return;
+      event.preventDefault();
+      setOpen(false);
+      showSection(href, true);
     });
   });
-  if (location.hash) mark(location.hash);
+  document.querySelectorAll(".dash-main a[href^='#']").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href") || "";
+      if (!sections.some((section) => `#${section.id}` === href)) return;
+      event.preventDefault();
+      showSection(href, true);
+    });
+  });
+  const initialHash = links.some((link) => link.getAttribute("href") === location.hash)
+    ? location.hash
+    : links[0]?.getAttribute("href");
+  if (initialHash) showSection(initialHash);
 }
 
 paintBag();
