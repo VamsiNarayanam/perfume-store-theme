@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="css/style.css?v=reveal">
+  <link rel="stylesheet" href="css/style.css?v=password-toggle">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23d77bae' width='32' height='32' rx='8'/%3E%3Cpath fill='white' d='M16 5c1.6 3.2 1.6 5 0 7.2C14.4 10 14.4 8.2 16 5zm0 22c-1.6-3.2-1.6-5 0-7.2 1.6 2.2 1.6 4 0 7.2zM5 16c3.2-1.6 5-1.6 7.2 0C10 17.6 8.2 17.6 5 16zm22 0c-3.2 1.6-5 1.6-7.2 0 2.2-1.6 4-1.6 7.2 0z'/%3E%3C/svg%3E">
 </head>
 <body class="auth-page is-loading">
@@ -47,10 +47,15 @@
           <span>Email</span>
           <input id="login-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
         </label>
-        <label class="auth-field" for="login-password">
-          <span>Password</span>
-          <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
-        </label>
+        <div class="auth-field">
+          <label class="auth-field-label" for="login-password"><span>Password</span></label>
+          <div class="auth-password-control">
+            <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+            <button class="auth-password-toggle" type="button" data-password-toggle="login-password" aria-controls="login-password" aria-label="Show password" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.5"></circle><path class="auth-password-slash" d="m4 4 16 16"></path></svg>
+            </button>
+          </div>
+        </div>
         <div class="auth-row">
           <label class="auth-check"><input id="remember" type="checkbox"> Remember me</label>
           <button class="auth-link" id="forgot" type="button">Forgot password?</button>
@@ -70,7 +75,7 @@
       </button>
     </section>
   </main>
-  <script src="js/auth.js?v=flow2"></script>
+  <script src="js/auth.js?v=flow3"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/motion.js?v=2"></script>
   <script>

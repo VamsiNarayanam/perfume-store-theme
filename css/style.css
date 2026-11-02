@@ -2973,6 +2973,12 @@ body.dashboard-page { background: #fff4fa; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+.auth-field-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 .auth-field input {
   width: 100%;
   min-height: 44px;
@@ -2982,6 +2988,35 @@ body.dashboard-page { background: #fff4fa; }
   background: white;
   color: #1c1418;
 }
+.auth-password-control { position: relative; }
+.auth-password-control input { padding-right: 48px; }
+.auth-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #6d5a63;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.auth-password-toggle:hover { background: #faedf4; }
+.auth-password-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.auth-password-toggle[aria-pressed="false"] .auth-password-slash { display: none; }
 .auth-field input[type="password"]::-ms-reveal,
 .auth-field input[type="password"]::-ms-clear {
   display: none;

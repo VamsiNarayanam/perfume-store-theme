@@ -26,6 +26,18 @@ document.querySelectorAll("[data-social]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-password-toggle]").forEach((button) => {
+  const input = document.getElementById(button.dataset.passwordToggle);
+  if (!input) return;
+
+  button.addEventListener("click", () => {
+    const showing = input.type === "password";
+    input.type = showing ? "text" : "password";
+    button.setAttribute("aria-pressed", String(showing));
+    button.setAttribute("aria-label", showing ? "Hide password" : "Show password");
+  });
+});
+
 const loginForm = document.querySelector("#login-form");
 if (loginForm) {
   const params = new URLSearchParams(window.location.search);
